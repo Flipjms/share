@@ -1,9 +1,9 @@
-<?php namespace Clumsy\Social;
+<?php namespace Clumsy\Share;
 
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 
-class Sharer {
+class BaseShareService {
 
 protected function queryStringAdd($url, $key, $value = '')
 	{
@@ -37,7 +37,7 @@ protected function queryStringAdd($url, $key, $value = '')
 
 		if ($view == null)
 		{
-			$view = View::exists("clumsy/social::{$this->origin}") ? "clumsy/social::{$this->origin}" : 'clumsy/social::template';
+			$view = View::exists("clumsy/share::{$this->origin}") ? "clumsy/share::{$this->origin}" : 'clumsy/share::template';
 		}
 
 		$url = str_replace(':url', urlencode($url_to_share), $url);

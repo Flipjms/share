@@ -1,6 +1,6 @@
-<?php namespace Clumsy\Social\Services;
+<?php namespace Clumsy\Share\Services;
 
-class Gplus extends \Clumsy\Social\Sharer {
+class Gplus extends \Clumsy\Share\BaseShareService {
 
 	protected $url = 'https://plus.google.com/share?url=:url';
 	protected $origin = 'gplus';

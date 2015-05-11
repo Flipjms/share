@@ -1,1 +1,1 @@
-<a class="clumsy-social-{{ $class }}" href="{{ $url }}"></a>
+<a class="share-{{ $class }}" href="{{ $url }}"></a>

@@ -1,6 +1,6 @@
-<?php namespace Clumsy\Social\Services;
+<?php namespace Clumsy\Share\Services;
 
-class Pinterest extends \Clumsy\Social\Sharer {
+class Pinterest extends \Clumsy\Share\BaseShareService {
 
 	protected $url = 'http://pinterest.com/pin/create/button/?url=:url';
 	protected $origin = 'pinterest';

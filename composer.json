@@ -1,5 +1,5 @@
 {
-    "name": "clumsy/social",
+    "name": "clumsy/share",
     "description": "A plugin to create share links on the fly directly on the view",
     "authors": [
         {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Clumsy\\Social\\": "src/"
+            "Clumsy\\Share\\": "src/"
         }
     },
     "extra": {

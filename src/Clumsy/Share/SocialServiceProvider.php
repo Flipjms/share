@@ -1,8 +1,8 @@
-<?php namespace Clumsy\Social;
+<?php namespace Clumsy\Share;
 
 use Illuminate\Support\ServiceProvider;
 
-class SocialServiceProvider extends ServiceProvider {
+class ShareServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -18,10 +18,10 @@ class SocialServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('clumsy/social', 'clumsy/social');
+		$this->package('clumsy/share', 'clumsy/share');
 
-        $this->app['social'] = $this->app->share(function($app){
-										return new Social;
+        $this->app['clumsy.share'] = $this->app->share(function($app){
+										return new Share;
 								  });
 
 	}
