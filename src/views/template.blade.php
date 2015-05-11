@@ -1,0 +1,1 @@
+<a class="clumsy-social-{{ $class }}" href="{{ $url }}"></a>

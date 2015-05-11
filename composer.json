@@ -1,0 +1,31 @@
+{
+    "name": "clumsy/social",
+    "description": "A plugin to create share links on the fly directly on the view",
+    "authors": [
+        {
+            "name": "Filipe Santos",
+            "email": "flipjms@gmail.com",
+            "keywords": ["laravel", "cms"],
+            "license": "MIT"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Clumsy\\Social\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.1-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
