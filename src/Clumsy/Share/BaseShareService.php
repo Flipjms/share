@@ -5,12 +5,12 @@ use Illuminate\Support\Facades\View;
 
 class BaseShareService {
 
-protected function queryStringAdd($url, $key, $value = '')
+	protected function queryStringAdd($url, $key, $value = '')
 	{
 		$url = preg_replace('/(.*)(\?|&)' . $key . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&');
 		$url = substr($url, 0, -1);
 		
-		$value = $value ? "=".urlencode($value) : '';
+		$value = $value ? "=".rawurlencode($value) : '';
 		
 		if (strpos($url, '?') === false)
 		{
@@ -40,7 +40,7 @@ protected function queryStringAdd($url, $key, $value = '')
 			$view = View::exists("clumsy/share::{$this->origin}") ? "clumsy/share::{$this->origin}" : 'clumsy/share::template';
 		}
 
-		$url = str_replace(':url', urlencode($url_to_share), $url);
+		$url = str_replace(':url', rawurlencode($url_to_share), $url);
 
 		return View::make($view, array('url' => $url, 'class' => $this->origin))->render();
 	}
