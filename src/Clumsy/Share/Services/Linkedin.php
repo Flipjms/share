@@ -4,4 +4,8 @@ class Linkedin extends \Clumsy\Share\BaseShareService {
 
 	protected $url = 'http://www.linkedin.com/shareArticle?mini=true&url=:url';
 	protected $origin = 'linkedin';
+
+	public $fieldsEquivalence = array(
+			'title' => 'title',
+		);
 }

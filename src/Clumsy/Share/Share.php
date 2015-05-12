@@ -14,6 +14,16 @@ class Share {
 
 		$service = new $service;
 
+		//Check the fields equivalence:
+		$data = isset($arguments[1]) ? $arguments[1] : array();
+		$newData = array();
+		foreach ($data as $key => $value) {
+			if (isset($service->fieldsEquivalence[$key])) {
+				$newData[$service->fieldsEquivalence[$key]] = $value;
+			}
+		}
+		$arguments[1] = $newData;
+
 		return call_user_func_array(array($service, 'share'), $arguments);
 	}
 
