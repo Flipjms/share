@@ -18,8 +18,8 @@ class Share {
 		$data = isset($arguments[1]) ? $arguments[1] : array();
 		$newData = array();
 		foreach ($data as $key => $value) {
-			if (isset($service->fieldsEquivalence[$key])) {
-				$newData[$service->fieldsEquivalence[$key]] = $value;
+			if (isset($service->acceptedFields[$key])) {
+				$newData[$service->acceptedFields[$key]] = $value;
 			}
 		}
 		$arguments[1] = $newData;

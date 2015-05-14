@@ -5,7 +5,8 @@ class Email extends \Clumsy\Share\BaseShareService {
 	protected $url = 'mailto:?body=:url';
 	protected $origin = 'email';
 
-	public $fieldsEquivalence = array(
-			'title' => 'subject',
+	public $acceptedFields = array(
+			'title'     => 'subject',
+			'mail_body' => 'body',
 		);
 }

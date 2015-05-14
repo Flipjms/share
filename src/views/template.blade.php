@@ -1,1 +1,1 @@
-<a class="share-{{ $class }}" href="{{ $url }}"></a>
+<a class="share-{{ $origin }}" href="{{ $url }}" target="_blank"></a>

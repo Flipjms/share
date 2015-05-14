@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\View;
 
 class BaseShareService {
 
+	public $acceptedFields = array();
+
 	protected function queryStringAdd($url, $key, $value = '')
 	{
 		$url = preg_replace('/(.*)(\?|&)' . $key . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&');
@@ -42,6 +44,6 @@ class BaseShareService {
 
 		$url = str_replace(':url', rawurlencode($url_to_share), $url);
 
-		return View::make($view, array('url' => $url, 'class' => $this->origin))->render();
+		return View::make($view, array('url' => $url, 'origin' => $this->origin))->render();
 	}
 }
