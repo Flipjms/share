@@ -7,6 +7,8 @@
         {
             "name": "Filipe Santos",
             "email": "flipjms@gmail.com",
+            "keywords": ["laravel", "cms"],
+            "license": "MIT"
         }
     ],
     "require": {
@@ -15,7 +17,12 @@
     },
     "autoload": {
         "psr-0": {
-            "Clumsy\\Share": "src/"
+            "Clumsy\\Share": "src/",
+        "illuminate/support": "4.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Clumsy\\Share\\": "src/"
         }
     },
     "extra": {
