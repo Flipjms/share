@@ -1,21 +1,21 @@
 {
     "name": "clumsy/share",
     "description": "A plugin to create share links on the fly directly on the view",
+    "keywords": ["laravel", "cms"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Filipe Santos",
             "email": "flipjms@gmail.com",
-            "keywords": ["laravel", "cms"],
-            "license": "MIT"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.*"
+        "illuminate/support": "5.1.*"
     },
     "autoload": {
         "psr-0": {
-            "Clumsy\\Share\\": "src/"
+            "Clumsy\\Share": "src/"
         }
     },
     "extra": {
