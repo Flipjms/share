@@ -35,7 +35,7 @@ class BaseShareService
         }
 
         if ($view == null) {
-            $view = view()->exists("clumsy/share.{$this->origin}") ? "clumsy/share.{$this->origin}" : 'clumsy/share.template';
+            $view = view()->exists("clumsy/share::{$this->origin}") ? "clumsy/share::{$this->origin}" : 'clumsy/share::template';
         }
 
         $url = str_replace(':url', rawurlencode($url_to_share), $url);

@@ -14,14 +14,9 @@
         "illuminate/support": "5.1.*"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Clumsy\\Share": "src/",
             "illuminate/support": "4.*"
-        }
-    },
-    "autoload": {
-        "psr-0": {
-            "Clumsy\\Share\\": "src/"
         }
     },
     "extra": {
