@@ -15,6 +15,18 @@ class ShareServiceProvider extends ServiceProvider
     protected $defer = false;
 
     /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->bind('clumsy.share', function ($app) {
+            return new Share;
+        });
+    }
+
+    /**
      * Bootstrap the application events.
      *
      * @return void
@@ -28,18 +40,6 @@ class ShareServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->loadViewsFrom(__DIR__.'/views', 'clumsy/share');
-    }
-
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->app->bind('clumsy.share', function ($app) {
-            return new Share;
-        });
     }
 
     /**
