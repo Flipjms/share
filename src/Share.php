@@ -31,7 +31,7 @@ class Share
 
     public function batch($url_to_share = null, $data = array(), $view = null, $services = null)
     {
-        $services = $services == null ? config('clumsy/share.services') : $services;
+        $services = $services == null ? config('clumsy.share.services') : $services;
 
         $buffer = '';
         foreach ($services as $service) {
