@@ -21,6 +21,8 @@ class ShareServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__.'/config/config.php', 'clumsy.share');
+
         $this->app->bind('clumsy.share', function ($app) {
             return new Share;
         });
@@ -33,10 +35,9 @@ class ShareServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->mergeConfigFrom(__DIR__.'/config/config.php', 'clumsy/share');
 
         $this->publishes([
-            __DIR__.'/config/config.php'  => config_path('vendor/clumsy/share/config.php'),
+            __DIR__.'/config/config.php'  => config_path('clumsy/share.php'),
         ], 'config');
 
         $this->loadViewsFrom(__DIR__.'/views', 'clumsy/share');
