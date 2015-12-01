@@ -1,11 +1,14 @@
-<?php namespace Clumsy\Share\Services;
+<?php
 
-class Facebook extends \Clumsy\Share\BaseShareService {
+namespace Clumsy\Share\Services;
 
-	protected $url = 'https://www.facebook.com/sharer/sharer.php?u=:url';
-	protected $origin = 'facebook';
+class Facebook extends \Clumsy\Share\BaseShareService
+{
 
-	public $acceptedFields = array(
-			'title' => 'title',
-		);
+    protected $url = 'https://www.facebook.com/sharer/sharer.php?u=:url';
+    protected $origin = 'facebook';
+
+    public $acceptedFields = array(
+            'title' => 'title',
+        );
 }

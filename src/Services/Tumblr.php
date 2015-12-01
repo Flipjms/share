@@ -1,11 +1,14 @@
-<?php namespace Clumsy\Share\Services;
+<?php
 
-class Tumblr extends \Clumsy\Share\BaseShareService {
+namespace Clumsy\Share\Services;
 
-	protected $url = 'http://www.tumblr.com/share?v=3&u=:url';
-	protected $origin = 'tumblr';
+class Tumblr extends \Clumsy\Share\BaseShareService
+{
 
-	public $acceptedFields = array(
-			'title' => 't', 
-		);
+    protected $url = 'http://www.tumblr.com/share?v=3&u=:url';
+    protected $origin = 'tumblr';
+
+    public $acceptedFields = array(
+            'title' => 't',
+        );
 }

@@ -1,11 +1,14 @@
-<?php namespace Clumsy\Share\Services;
+<?php
 
-class Linkedin extends \Clumsy\Share\BaseShareService {
+namespace Clumsy\Share\Services;
 
-	protected $url = 'http://www.linkedin.com/shareArticle?mini=true&url=:url';
-	protected $origin = 'linkedin';
+class Linkedin extends \Clumsy\Share\BaseShareService
+{
 
-	public $acceptedFields = array(
-			'title' => 'title',
-		);
+    protected $url = 'http://www.linkedin.com/shareArticle?mini=true&url=:url';
+    protected $origin = 'linkedin';
+
+    public $acceptedFields = array(
+            'title' => 'title',
+        );
 }

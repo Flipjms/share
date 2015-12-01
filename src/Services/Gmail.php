@@ -1,11 +1,14 @@
-<?php namespace Clumsy\Share\Services;
+<?php
 
-class Gmail extends \Clumsy\Share\BaseShareService {
+namespace Clumsy\Share\Services;
 
-	protected $url = 'https://mail.google.com/mail/?view=cm&fs=1&to&ui=2&tf=1&su=:url';
-	protected $origin = 'gmail';
+class Gmail extends \Clumsy\Share\BaseShareService
+{
 
-	public $acceptedFields = array(
-			'content' => 'body',
-		);
+    protected $url = 'https://mail.google.com/mail/?view=cm&fs=1&to&ui=2&tf=1&su=:url';
+    protected $origin = 'gmail';
+
+    public $acceptedFields = array(
+            'content' => 'body',
+        );
 }

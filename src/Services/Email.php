@@ -1,12 +1,15 @@
-<?php namespace Clumsy\Share\Services;
+<?php
 
-class Email extends \Clumsy\Share\BaseShareService {
+namespace Clumsy\Share\Services;
 
-	protected $url = 'mailto:?body=:url';
-	protected $origin = 'email';
+class Email extends \Clumsy\Share\BaseShareService
+{
 
-	public $acceptedFields = array(
-			'title'     => 'subject',
-			'mail_body' => 'body',
-		);
+    protected $url = 'mailto:?body=:url';
+    protected $origin = 'email';
+
+    public $acceptedFields = array(
+            'title'     => 'subject',
+            'mail_body' => 'body',
+        );
 }

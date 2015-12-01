@@ -1,11 +1,14 @@
-<?php namespace Clumsy\Share\Services;
+<?php
 
-class Twitter extends \Clumsy\Share\BaseShareService {
+namespace Clumsy\Share\Services;
 
-	protected $url = 'https://twitter.com/intent/tweet?url=:url';
-	protected $origin = 'twitter';
+class Twitter extends \Clumsy\Share\BaseShareService
+{
 
-	public $acceptedFields = array(
-			'title' => 'text',
-		);
+    protected $url = 'https://twitter.com/intent/tweet?url=:url';
+    protected $origin = 'twitter';
+
+    public $acceptedFields = array(
+            'title' => 'text',
+        );
 }

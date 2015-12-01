@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
  |--------------------------------------------------------------------------
@@ -9,8 +9,8 @@
  */
 
 return array(
-	'services' => array(
-			'facebook',
-			'twitter',
-		)
+    'services' => array(
+            'facebook',
+            'twitter',
+        )
 );

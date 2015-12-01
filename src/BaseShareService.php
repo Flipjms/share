@@ -24,7 +24,7 @@ class BaseShareService
 
     public function share($url_to_share = null, $data = array(), $view = null)
     {
-        if ($url_to_share == null) {
+        if ($url_to_share === null) {
             $url_to_share = Request::url();
         }
 
@@ -34,7 +34,7 @@ class BaseShareService
             $url = $this->queryStringAdd($url, $key, $value);
         }
 
-        if ($view == null) {
+        if ($view === null) {
             $view = view()->exists("clumsy/share::{$this->origin}") ? "clumsy/share::{$this->origin}" : 'clumsy/share::template';
         }
 

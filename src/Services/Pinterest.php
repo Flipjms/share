@@ -1,12 +1,15 @@
-<?php namespace Clumsy\Share\Services;
+<?php
 
-class Pinterest extends \Clumsy\Share\BaseShareService {
+namespace Clumsy\Share\Services;
 
-	protected $url = 'http://pinterest.com/pin/create/button/?url=:url';
-	protected $origin = 'pinterest';
+class Pinterest extends \Clumsy\Share\BaseShareService
+{
 
-	public $acceptedFields = array(
-			'image'   => 'media',
-			'content' => 'description',
-		);
+    protected $url = 'http://pinterest.com/pin/create/button/?url=:url';
+    protected $origin = 'pinterest';
+
+    public $acceptedFields = array(
+            'image'   => 'media',
+            'content' => 'description',
+        );
 }
